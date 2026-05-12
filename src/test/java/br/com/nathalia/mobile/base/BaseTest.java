@@ -17,9 +17,13 @@ public class BaseTest {
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setCapability("platformName", "Android");
         caps.setCapability("automationName", "UiAutomator2");
-        caps.setCapability("deviceName", "emulator-5554");
-        caps.setCapability("appPackage", "com.android.settings");
-        caps.setCapability("appActivity", ".Settings");
+        caps.setCapability("deviceName", "emulator");
+        caps.setCapability("appPackage", "br.com.xp.carteira");
+        caps.setCapability(
+                "appActivity",
+                "br.com.xpinc.mobile.commons.flutter.host.CommonsFlutterFragmentActivity"
+        );
+        caps.setCapability("noReset", true);
 
         driver = new AndroidDriver(
                 new URL("http://127.0.0.1:4723"),
