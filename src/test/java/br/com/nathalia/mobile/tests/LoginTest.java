@@ -12,15 +12,22 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class LoginTest extends BaseTest {
 
     @Test
-    public void deveIniciarLoginComCpf() {
+    public void devePermitirInicioDeLoginComCpfValido() {
+
+        System.out.println("🚀 [TEST] Iniciando teste de login XP");
 
         HomeLoginPage home = new HomeLoginPage(driver);
         CpfLoginPage cpfPage = new CpfLoginPage(driver);
 
         home.clicarAcessarConta();
+
         cpfPage.digitarCpf(TestData.CPF_VALIDO);
 
-        // ✅ ASSERT (agora é teste de verdade)
-        assertTrue(cpfPage.botaoAcessarVisivel());
+        assertTrue(
+                cpfPage.botaoAcessarVisivel(),
+                "Botão 'Acessar' não apareceu"
+        );
+
+        System.out.println("✅ Teste finalizado com sucesso");
     }
 }
