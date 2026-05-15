@@ -1,21 +1,28 @@
-# Mobile Appium Tests
+# 📱 Mobile Appium Tests - XP
 
-Projeto de automação mobile Android utilizando Appium, Java e JUnit 5.
+Projeto de automação mobile Android utilizando Appium.
 
-## Stack
+## ✅ Cenário automatizado
+
+- Abertura do app XP
+- Clique em "Acesse sua conta"
+- Navegação até tela de login
+- Digitação de CPF
+- Validação do botão "Acessar"
+
+## 🧠 Stack
+
 - Java 11
 - Appium (UiAutomator2)
-- Selenium 3
+- Selenium
 - JUnit 5
 - Maven
 
-## Cenário automatizado
-- Abertura do app
-- Clique em "Acesse sua conta"
-- Navegação até a tela de login
-- Digitação de CPF
+## ⚠️ Observações
 
-## Observações técnicas
-O aplicativo automatizado é desenvolvido em Flutter.
-Para lidar com renderização dinâmica, a automação utiliza
-W3C Pointer Actions para simular gestos de toque.
+O aplicativo é desenvolvido em Flutter, portanto foram utilizadas
+ações W3C (PointerInput) para lidar com interação dinâmica.
+
+## 🎯 Objetivo
+
+Validar a viabilidade de automação mobile no app XP.
